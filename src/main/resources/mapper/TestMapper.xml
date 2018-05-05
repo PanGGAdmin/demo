@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.mapper.TestMapper">
+<update id="updateTest" parameterType="Test">
+    update test.test
+        set
+        name = #{name},
+        sex =#{sex},
+        birthday = #{birthday}
+        where
+        id = #{id} ;
+</update>
+<insert id="addTest" parameterType="Test">
+insert into test.test
+	(
+	name,
+	sex,
+	birthday
+	)
+	values
+	(
+	#{name},
+	#{sex},
+	#{birthday}
+	);
+
+</insert>
+</mapper>
